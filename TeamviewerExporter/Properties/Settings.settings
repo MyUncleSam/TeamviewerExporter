@@ -1,0 +1,21 @@
+﻿<?xml version='1.0' encoding='utf-8'?>
+<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="TeamviewerExporter.Properties" GeneratedClassName="Settings">
+  <Profiles />
+  <Settings>
+    <Setting Name="AuthorizationToken" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">1863152-yCthX3KSfWLFJKuT9xMP</Value>
+    </Setting>
+    <Setting Name="BaseUrl" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">https://webapi.teamviewer.com</Value>
+    </Setting>
+    <Setting Name="DevicesUrlPart" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">/api/v1/devices</Value>
+    </Setting>
+    <Setting Name="ImportDefaultPassword" Type="System.String" Scope="Application">
+      <Value Profile="(Default)" />
+    </Setting>
+    <Setting Name="GroupsUrlPart" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">/api/v1/groups</Value>
+    </Setting>
+  </Settings>
+</SettingsFile>
