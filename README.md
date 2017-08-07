@@ -10,7 +10,10 @@ It exports two files into the program directory - so make sure your user has wri
 Open the program .config file and add your Authorization token from your teamviewer account.
 
 ## AuthorizationToken
-Token from your teamviewer account which should be used. No username / password credentials are needed here. Please google how to create one.
+Token from your teamviewer account which should be used. No username / password credentials are needed here. You can create one by:
+- login at https://login.teamviewer.com
+- edit your profil (upper right)
+- add a new app
 
 ## BaseUrl
 Entry url for the teamviewer api.
