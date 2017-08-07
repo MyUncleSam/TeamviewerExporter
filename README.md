@@ -11,9 +11,9 @@ Open the program .config file and add your Authorization token from your teamvie
 
 ## AuthorizationToken
 Token from your teamviewer account which should be used. No username / password credentials are needed here. You can create one by:
-- login at https://login.teamviewer.com
-- edit your profil (upper right)
-- add a new app
+1. login at https://login.teamviewer.com
+2. edit your profil (upper right)
+3. add a new app
 
 ## BaseUrl
 Entry url for the teamviewer api.
