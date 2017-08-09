@@ -6,7 +6,7 @@ It exports two files into the program directory - so make sure your user has wri
 - original.csv - 1:1 the information which are received from teamviewer api
 - rdm.csv - RemoteDesktopManager compatible csv format for importing them into any folder (https://remotedesktopmanager.com/)
 
-> <span style="color:orange">Please keep in mind that it is not possible to export saved connection passwords as the API is not providing them!</span>
+<span style="color:orange">Please keep in mind that it is not possible to export saved connection passwords as the API is not providing them!</span>
 
 # Configuration
 Open the program .config file and add your Authorization token from your teamviewer account.
