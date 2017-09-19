@@ -16,8 +16,10 @@ Token from your teamviewer account which should be used. No username / password 
 1. login at https://login.teamviewer.com
 2. edit your profil (upper right)
 3. add a new app
- 3.1 group management -> view groups
- 3.2 computers and contacts -> view only
+
+Permission for teamviewer app:
+- group management -> view groups
+- computers and contacts -> view only
 
 ## BaseUrl
 Entry url for the teamviewer api.
