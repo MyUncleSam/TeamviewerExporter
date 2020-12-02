@@ -27,7 +27,7 @@ namespace TeamviewerExporter
                 requestGroups.AddHeader("Authorization", string.Format("Bearer {0}", Properties.Settings.Default.AuthorizationToken));
                 IRestResponse<Groups> responseGroups = client.Execute<Groups>(requestGroups);
 
-                Console.WriteLine(string.Format("Got {0} entries and {1} groups.", responseDevices.Data.devices.Count, responseGroups.Data.groups.Count));
+                Console.WriteLine(string.Format("Got {0} entries and {1} groups.", responseDevices?.Data?.devices?.Count ?? -1, responseGroups?.Data?.groups?.Count ?? -1));
 
                 Console.WriteLine("Adding information to original entries...");
 
@@ -44,7 +44,7 @@ namespace TeamviewerExporter
                     }
 
                     // write group name
-                    Group inGroup = responseGroups.Data.groups.FirstOrDefault(w => w.id == responseDevices.Data.devices[i].groupid);
+                    Group inGroup = responseGroups?.Data?.groups?.FirstOrDefault(w => w.id == responseDevices.Data.devices[i].groupid);
                     if(inGroup != null)
                     {
                         responseDevices.Data.devices[i].groupname = inGroup.name;

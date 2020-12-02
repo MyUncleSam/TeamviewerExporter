@@ -12,7 +12,7 @@ namespace TeamviewerExporter.Properties {
     
     
     [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
-    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.VisualStudio.Editors.SettingsDesigner.SettingsSingleFileGenerator", "15.1.0.0")]
+    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.VisualStudio.Editors.SettingsDesigner.SettingsSingleFileGenerator", "16.8.1.0")]
     internal sealed partial class Settings : global::System.Configuration.ApplicationSettingsBase {
         
         private static Settings defaultInstance = ((Settings)(global::System.Configuration.ApplicationSettingsBase.Synchronized(new Settings())));
@@ -20,15 +20,6 @@ namespace TeamviewerExporter.Properties {
         public static Settings Default {
             get {
                 return defaultInstance;
-            }
-        }
-        
-        [global::System.Configuration.ApplicationScopedSettingAttribute()]
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("1863152-yCthX3KSfWLFJKuT9xMP")]
-        public string AuthorizationToken {
-            get {
-                return ((string)(this["AuthorizationToken"]));
             }
         }
         
@@ -65,6 +56,15 @@ namespace TeamviewerExporter.Properties {
         public string GroupsUrlPart {
             get {
                 return ((string)(this["GroupsUrlPart"]));
+            }
+        }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("XXXXXXXX-XXXXXXXXXXXXXXXXXXXX")]
+        public string AuthorizationToken {
+            get {
+                return ((string)(this["AuthorizationToken"]));
             }
         }
     }
