@@ -17,15 +17,23 @@ namespace TeamviewerExporter
                 Console.WriteLine("Connecting to teamviewer web api ...");
                 RestClient client = new RestClient(Properties.Settings.Default.BaseUrl);
 
-                Console.WriteLine("Getting device list...");
+                Console.Write("Getting device list...");
                 RestRequest requestDevices = new RestRequest(Properties.Settings.Default.DevicesUrlPart, Method.GET);
                 requestDevices.AddHeader("Authorization", string.Format("Bearer {0}", Properties.Settings.Default.AuthorizationToken));
                 IRestResponse<TeamviewerExporter.Devices> responseDevices = client.Execute<TeamviewerExporter.Devices>(requestDevices);
+                Console.WriteLine(responseDevices.ResponseStatus.ToString());
 
-                Console.WriteLine("Getting groups list...");
+                if (!string.IsNullOrWhiteSpace(responseDevices.ErrorMessage))
+                    Console.WriteLine(string.Format("Error Information: {0}", responseDevices.ErrorMessage));
+
+                Console.Write("Getting groups list...");
                 RestRequest requestGroups = new RestRequest(Properties.Settings.Default.GroupsUrlPart, Method.GET);
                 requestGroups.AddHeader("Authorization", string.Format("Bearer {0}", Properties.Settings.Default.AuthorizationToken));
                 IRestResponse<Groups> responseGroups = client.Execute<Groups>(requestGroups);
+                Console.WriteLine(responseGroups.ResponseStatus.ToString());
+
+                if (!string.IsNullOrWhiteSpace(responseGroups.ErrorMessage))
+                    Console.WriteLine(string.Format("Error Information: {0}", responseGroups.ErrorMessage));
 
                 Console.WriteLine(string.Format("Got {0} entries and {1} groups.", responseDevices?.Data?.devices?.Count ?? -1, responseGroups?.Data?.groups?.Count ?? -1));
 
