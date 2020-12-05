@@ -14,6 +14,9 @@ namespace TeamviewerExporter
         {
             try
             {
+                // seems like teamviewer changed their procotol in 12/2020 (or bevore)
+                System.Net.ServicePointManager.SecurityProtocol = System.Net.SecurityProtocolType.Tls12;
+
                 Console.WriteLine("Connecting to teamviewer web api ...");
                 RestClient client = new RestClient(Properties.Settings.Default.BaseUrl);
 
